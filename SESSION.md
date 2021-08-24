@@ -123,6 +123,7 @@ componentWillUnmount() {
 }
 ```
 ### hook (version >= 16.8)
+please refer hook.jsx
 - useState
 ```
 this.state
