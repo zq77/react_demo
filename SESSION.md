@@ -20,6 +20,10 @@ String.format("xxx %s xxx", item.getId())
 "xxx" + item.id + "xxx"
 `xxx {item.id} xxx`
 ```
+- Promise
+  Promise.all()
+- await & asyn
+
 ### lifecycle
 https://reactjs.org/docs/react-component.html#lifecycle-methods
 
@@ -106,6 +110,10 @@ Context.Consumer
 other prefence: redux
 ```
 
+### Lazy
+please reference lazy.jsx
+React.lazy
+
 ### AJAX
 ```
 componentDidMount() {
@@ -133,6 +141,8 @@ this.state
 (componentDidMount, componentDidUpdate, componentWillUnmount)
 ```
 
-
 ### route
 please refer main.jsx
+
+### ant design
+https://ant.design/components/
