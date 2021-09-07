@@ -27,9 +27,9 @@ class AppComponent extends React.Component {
                             <li><Link to="/hook">hook component</Link></li>
                         </ul>
                     </nav>
-                    <Route path="/index" component={() => <div> This is a React component index! </div>}/>
-                    <Route path="/lifecycle" component={Lifecycle}/>
+                    <Route path="/index" component={() => <div> Hello world! </div>}/>
                     <Route path="/basic" component={(props) => <BasicComponent name="test" {...props}/>}/>
+                    <Route path="/lifecycle" component={Lifecycle}/>
                     <Route path="/list" component={ListComponent}/>
                     <Route path="/chat" component={ChatComponent}/>
                     <Route path="/lazy" component={LazyComponent}/>

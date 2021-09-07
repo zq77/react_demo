@@ -20,12 +20,6 @@ String.format("xxx %s xxx", item.getId())
 "xxx" + item.id + "xxx"
 `xxx {item.id} xxx`
 ```
-- Promise
-  Promise.all()
-- await & asyn
-
-### lifecycle
-https://reactjs.org/docs/react-component.html#lifecycle-methods
 
 ### JSX
 please refer basic.jsx
@@ -33,6 +27,9 @@ please refer basic.jsx
 var myDivElement = <div className="foo" />;
 ReactDOM.render(myDivElement, document.getElementById('example'));
 ```
+
+### lifecycle
+https://reactjs.org/docs/react-component.html#lifecycle-methods
 
 ### Component
 please refer basic.jsx
@@ -66,7 +63,8 @@ ReactDOM.render(
 1. state and lifecyle (version < 16.8)
 2. props and this.props
 ```
-### state & props
+
+### state
 please refer list.jsx
 ```
 init
@@ -109,40 +107,3 @@ Context.Consumer
 
 other prefence: redux
 ```
-
-### Lazy
-please reference lazy.jsx
-React.lazy
-
-### AJAX
-```
-componentDidMount() {
-    this.serverRequest = $.get(this.props.source, function (result) {
-      var lastGist = result[0];
-      this.setState({
-        username: lastGist.owner.login,
-        lastGistUrl: lastGist.html_url
-      });
-    }.bind(this));
-}
-
-componentWillUnmount() {
-    this.serverRequest.abort();
-}
-```
-### hook (version >= 16.8)
-please refer hook.jsx
-- useState
-```
-this.state
-```
-- useEffect
-```
-(componentDidMount, componentDidUpdate, componentWillUnmount)
-```
-
-### route
-please refer main.jsx
-
-### ant design
-https://ant.design/components/

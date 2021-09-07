@@ -25,7 +25,7 @@ class Content extends React.Component {
     constructor(props) {
         super(props);
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         // 渲染前调用
         console.log('Component WILL MOUNT!')
     }
@@ -33,14 +33,14 @@ class Content extends React.Component {
         // 在第一次渲染后调用, 之后组件已经生成了对应的DOM结构
         console.log('Component DID MOUNT!')
     }
-    componentWillReceiveProps(newProps) {
+    UNSAFE_componentWillReceiveProps(newProps) {
         // 在组件接收到一个新的 prop (更新后)时被调用
         console.log('Component WILL RECEIVE PROPS!')
     }
     shouldComponentUpdate(newProps, newState) {
         return true;
     }
-    componentWillUpdate(nextProps, nextState) {
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         // 在组件接收到新的props或者state但还没有render时被调用
         console.log('Component WILL UPDATE!');
     }
