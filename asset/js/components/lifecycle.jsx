@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 class Button extends React.Component {
     constructor(props) {
@@ -62,4 +62,28 @@ class Content extends React.Component {
     }
 }
 
-module.exports = Button;
+class Timer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {date: new Date()}
+    }
+    componentDidMount() {
+        this.timerId = setInterval(() => {
+            console.log("update date");
+            this.setState({date : new Date()});
+        }, 1000)
+    }
+    componentWillUnmount() {
+        // clearInterval(this.timerId);
+    }
+    render() {
+        return (
+            <div>
+                <h1>Hello, world!</h1>
+                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            </div>
+        );
+    }
+}
+
+export {Button, Timer};

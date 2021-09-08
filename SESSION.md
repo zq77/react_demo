@@ -107,3 +107,9 @@ Context.Consumer
 
 other prefence: redux
 ```
+
+### Containment
+please reference dialog.jsx
+```
+props.children
+```

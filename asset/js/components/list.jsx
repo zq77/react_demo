@@ -20,9 +20,10 @@ function ListItem(props) {
 }
 
 class List extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-        this.state = {list: prodList}
+    constructor(props) {
+        super(props);
+        this.state = {list: prodList};
+        // this.createItem = this.createItem.bind(this)
     }
 
     removeItem = (i) => {
@@ -41,17 +42,20 @@ class List extends React.Component {
         }
         this.setState(state => ({
             list: state.list.concat({id: lastItem.id + 1, name: `test${lastItem.id + 1}`})
+            // list: [...state.list, {id: lastItem.id + 1, name: `2test${lastItem.id + 1}`}]
         }));
     }
 
     render() {
-        const content = this.state.list.map((item, index) =>
-            <ListItem key={index} id={item.id} name={item.name} onRemoveItem={this.removeItem}/>
+        const content = this.state.list.map((item) =>
+            <ListItem key={item.id} id={item.id} name={item.name} onRemoveItem={this.removeItem}/>
         );
         return (
             <div>
                 {content}
                 <button onClick={this.createItem.bind(this)}>Create</button>
+                {/* <button onClick={this.createItem}>Create</button> */}
+                {/* <button onClick={() => this.createItem()}>Create</button> */}
             </div>
         );
     }
