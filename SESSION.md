@@ -38,9 +38,7 @@ please refer basic.jsx
 function HelloMessage(props) {
     return <h1>Hello {props.name}!</h1>;
 }
- 
 const element = <HelloMessage name="Runoob"/>;
- 
 ReactDOM.render(
     element,
     document.getElementById('example')
@@ -50,7 +48,7 @@ ReactDOM.render(
 ```
 class Welcome extends React.Component {
   render() {
-    return <h1>Hello {this.props.name}!</h1>;
+    return <span>Hello {this.props.name}!</span>;
   }
 }
 ReactDOM.render(
@@ -60,8 +58,8 @@ ReactDOM.render(
 ```
 - different
 ```
-1. state and lifecyle (version < 16.8)
-2. props and this.props
+state and lifecyle (version < 16.8)
+props and this.props
 ```
 
 ### state

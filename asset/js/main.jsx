@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
-import ListComponent from './components/list.jsx';
+import {List as ListComponent} from './components/list.jsx';
 import BasicComponent from './components/basic.jsx';
 import {Button as Lifecycle} from './components/lifecycle.jsx';
 import HookLifecycle from './components/hook.jsx';
