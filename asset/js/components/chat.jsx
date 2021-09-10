@@ -39,7 +39,7 @@ class ContentComponent extends React.Component {
 class LoginComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {user: ""}
+        this.state = {user: "", userInput: ""}
         // this.loginInputRef = React.createRef();
         this.loginInput = null
         this.setLoginInputRef = element => {
@@ -50,10 +50,21 @@ class LoginComponent extends React.Component {
     handleLogin = () => {
         // console.log(this.refs.loginInput);
         // console.log(this.loginInputRef.current.value);
-        console.log(this.loginInput.value);
-        this.setState({user: this.loginInput.value})
+        // console.log(this.loginInput.value);
+        // this.setState({user: this.loginInput.value})
+        console.log(this.state);
+        this.setState(state => ({user: state.userInput}))
     }
 
+    handleInputChange = (event) => {
+        const value = event.target.value;
+        const name = event.target.name;
+
+        this.setState({
+            [name]: value
+        });
+    }
+    
     render() {
         return (
             this.state.user ?
@@ -63,7 +74,8 @@ class LoginComponent extends React.Component {
                 :
                 <div>
                     {/*<input type="text" ref={this.loginInputRef} />*/}
-                    <input type="text" ref={this.setLoginInputRef} />
+                    {/* <input type="text" ref={this.setLoginInputRef} /> */}
+                    <input type="text" name="userInput" value={this.state.userInput} onChange={this.handleInputChange} />
                     <br/>
                     <button onClick={this.handleLogin}>login</button>
                 </div>

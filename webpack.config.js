@@ -3,6 +3,7 @@ var webpack = require('webpack');
 const lessRegex = /\.less$/;
 
 module.exports = {
+    devtool: 'eval-source-map',
     entry: { app: ['./asset/js/main.jsx'] },
     output: {
         path: path.resolve(__dirname, "./build"),

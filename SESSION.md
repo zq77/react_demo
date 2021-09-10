@@ -14,22 +14,19 @@ function callback(data) {
     ...
 }
 ```
-- `${}``
+- `${}`
 ```
 String.format("xxx %s xxx", item.getId())
 "xxx" + item.id + "xxx"
-`xxx {item.id} xxx`
+`xxx ${item.id} xxx`
 ```
 
 ### JSX
-please refer basic.jsx
+please refer main.jsx
 ```
 var myDivElement = <div className="foo" />;
 ReactDOM.render(myDivElement, document.getElementById('example'));
 ```
-
-### lifecycle
-https://reactjs.org/docs/react-component.html#lifecycle-methods
 
 ### Component
 please refer basic.jsx
@@ -84,6 +81,13 @@ handleClick = () => {...}
 onClick={(e) => this.handleClick(e)}
 ```
 
+### lifecycle
+please refer lifecycle.jsx
+![lifecycle](https://upload-images.jianshu.io/upload_images/24637570-202329d84d437ba0.jpg)
+
+### Form
+please reference chat.jsx
+
 ### Refs
 please reference chat.jsx
 ```
@@ -106,7 +110,7 @@ Context.Consumer
 other prefence: redux
 ```
 
-### Containment
+### Composition
 please reference dialog.jsx
 ```
 props.children
